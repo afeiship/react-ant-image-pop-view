@@ -8,12 +8,14 @@
     className: PropTypes.string,
     placement: PropTypes.string,
     size: PropTypes.array,
+    popSize: PropTypes.array,
     urls: PropTypes.array,
   };
 
   static defaultProps = {
     placement: "rightTop",
     size: ['100px'],
+    popSize: ['100px'],
     urls: []
   };
   
