@@ -29,7 +29,7 @@ export default class extends Component {
     const { urls, size } = this.props;
     return (
       <ReactFigure style={{ width: size[0], height: size[1] || size[0] }}>
-        <img src={ urls[1]} />
+        <img src={ urls[1] || urls[0]} />
       </ReactFigure>
     )
   }
