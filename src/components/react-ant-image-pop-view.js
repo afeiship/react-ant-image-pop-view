@@ -26,9 +26,9 @@ export default class extends Component {
   /*===properties end===*/
 
   get contentView() {
-    const { urls, size } = this.props;
+    const { urls, popSize } = this.props;
     return (
-      <ReactFigure style={{ width: size[0], height: size[1] || size[0] }}>
+      <ReactFigure style={{ width: popSize[0], height: popSize[1] || popSize[0] }}>
         <img src={ urls[1] || urls[0]} />
       </ReactFigure>
     )
