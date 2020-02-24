@@ -1,2 +1,2 @@
-import ReactAntImagePopView from 'components/react-ant-image-pop-view';
+import ReactAntImagePopView from './components';
 export default ReactAntImagePopView;

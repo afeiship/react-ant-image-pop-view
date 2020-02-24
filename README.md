@@ -1,75 +1,74 @@
 # react-ant-image-pop-view
-> Ant popover view image for react
+> Ant popover view image for react.
 
-## properties:
-```javascript
-
-  static propTypes = {
-    className: PropTypes.string,
-    placement: PropTypes.string,
-    size: PropTypes.array,
-    popSize: PropTypes.array,
-    urls: PropTypes.array,
-  };
-
-  static defaultProps = {
-    placement: "rightTop",
-    size: ['100px'],
-    popSize: ['100px'],
-    urls: []
-  };
-  
+## installation
+```shell
+npm install -S @feizheng/react-ant-image-pop-view
 ```
 
-## install && import:
-```bash
-npm install --save afeiship/react-ant-image-pop-view --registry=https://registry.npm.taobao.org
+## update
+```shell
+npm update @feizheng/react-ant-image-pop-view
 ```
 
-```js
-import ReactAntImagePopView from 'react-ant-image-pop-view';
-```
-
-```scss
-// customize your styles:
-$react-ant-image-pop-view-options:(
-);
-
-@import 'node_modules/react-ant-image-pop-view/dist/style.scss';
-```
+## properties
+| Name      | Type   | Default    | Description                           |
+| --------- | ------ | ---------- | ------------------------------------- |
+| className | string | -          | The extended className for component. |
+| placement | string | 'rightTop' | Placement for antd.                   |
+| size      | array  | ['100px']  | Thumbnail size.                       |
+| popSize   | array  | ['100px']  | Popup picture size.                   |
+| thumbnail | string | -          | The thumbnail/popup pictures.         |
+| original  | string | -          | The popup original picutrel.          |
 
 
-## usage:
-```jsx
+## usage
+1. import css
+  ```scss
+  @import "~@feizheng/react-ant-image-pop-view/dist/style.scss";
 
-// install: npm install afeiship/react-ant-image-pop-view --save
-// import : import ReactAntImagePopView from 'react-ant-image-pop-view'
+  // customize your styles:
+  $react-ant-image-pop-view-options: ()
+  ```
+2. import js
+  ```js
+  import ReactAntImagePopView from '@feizheng/react-ant-image-pop-view';
+  import ReactDOM from 'react-dom';
+  import React from 'react';
+  import './assets/style.scss';
 
-class App extends React.Component {
-  state = {
-
-  };
-
-  constructor(props) {
-    super(props);
-    window.demo = this;
-    window.refs = this.refs;
-    window.rc = this.refs.rc;
+  class App extends React.Component {
+    componentDidMount() {}
+    render() {
+      return (
+        <div className="app-container">
+          <ReactAntImagePopView
+            thumbnail="https://himg.bdimg.com/sys/portrait/item/be10475f686d6c73db00.jpg"
+            original="https://himg.bdimg.com/sys/portrait/item/be10475f686d6x73db00.jpg"
+            size={['100px', '100px']}
+            popSize={[200, 200]}
+          />
+        </div>
+      );
+    }
   }
 
-  render() {
-    return (
-      <div className="hello-react-ant-image-pop-view">
-        <ReactAntImagePopView
-          urls={[
-            'http://placeholder.qiniudn.com/80x80',
-            'http://placeholder.qiniudn.com/150x150'
-          ]}
-          size={['100px', '100px']}
-          ref='rc' />
-      </div>
-    );
-  }
-}
+  ReactDOM.render(<App />, document.getElementById('app'));
 
-```
+  ```
+
+## documentation
+- https://afeiship.github.io/react-ant-image-pop-view/
+
+## resources
+- https://www.robinwieruch.de/minimal-react-webpack-babel-setup/
+- https://www.valentinog.com/blog/react-webpack-babel/
+- https://jestjs.io/docs/en/tutorial-react#snapshot-testing-with-mocks-enzyme-and-react-16
+- https://testing-library.com/docs/react-testing-library/api
+
+## todos
+- [ ] Add: semver number for every build files.
+- [ ] Add: need output css files.
+- [ ] Add: PWA support for docs.
+- [ ] Add: source.map file for dist(`you can upload for production debug`).
+- [ ] BUG: npm run dev will clean dist.

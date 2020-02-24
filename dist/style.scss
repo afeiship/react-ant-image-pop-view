@@ -1,7 +1,12 @@
-$react-ant-image-pop-view-options:(
+$react-ant-image-pop-view-options: () !default;
 
-)!default;
+.react-ant-image-pop-view {
+}
 
-.react-ant-image-pop-view{
-  color:#000;
+.ant-popover {
+  .react-figure {
+    img {
+      width: 100%;
+    }
+  }
 }
