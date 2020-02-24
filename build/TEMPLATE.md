@@ -17,6 +17,8 @@ __GENERATE_DOCS__
 ## usage
 1. import css
   ```scss
+  @import "~@feizheng/webkit-sassui-frame-wrapper/dist/index.scss";
+  @import "~@feizheng/react-figure/dist/style.scss";
   @import "~@feizheng/react-ant-image-pop-view/dist/style.scss";
 
   // customize your styles:

@@ -1,6 +1,6 @@
 {
   "name": "@feizheng/react-ant-image-pop-view",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ant popover view image for react.",
   "main": "dist/index.js",
   "scripts": {
