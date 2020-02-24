@@ -36,7 +36,7 @@ export default class ReactAntImagePopView extends Component {
     /**
      * The popup original picutrel.
      */
-    src: PropTypes.string
+    src: PropTypes.string.isRequired
   };
 
   static defaultProps = {
@@ -46,14 +46,14 @@ export default class ReactAntImagePopView extends Component {
   };
 
   get contentView() {
-    const { thumbnail, popSize } = this.props;
+    const { popSize } = this.props;
     return (
       <ReactFigure
         style={{
           width: popSize[0],
           height: popSize[1] || popSize[0]
         }}>
-        <img src={thumbnail} />
+        <img src={src} />
       </ReactFigure>
     );
   }
