@@ -19,7 +19,7 @@ npm update @feizheng/react-ant-image-pop-view
 | size      | array  | ['100px']  | Thumbnail size.                       |
 | popSize   | array  | ['100px']  | Popup picture size.                   |
 | thumbnail | string | -          | The thumbnail/popup pictures.         |
-| original  | string | -          | The popup original picutrel.          |
+| src       | string | -          | The popup original picutrel.          |
 
 
 ## usage
@@ -46,7 +46,7 @@ npm update @feizheng/react-ant-image-pop-view
         <div className="app-container">
           <ReactAntImagePopView
             thumbnail="https://himg.bdimg.com/sys/portrait/item/be10475f686d6c73db00.jpg"
-            original="https://himg.bdimg.com/sys/portrait/item/be10475f686d6x73db00.jpg"
+            src="https://himg.bdimg.com/sys/portrait/item/be10475f686d6x73db00.jpg"
             size={['100px', '100px']}
             popSize={[200, 200]}
           />
