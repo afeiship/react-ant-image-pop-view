@@ -16,8 +16,8 @@ npm update @feizheng/react-ant-image-pop-view
 | --------- | ------ | ---------- | ------------------------------------- |
 | className | string | -          | The extended className for component. |
 | placement | string | 'rightTop' | Placement for antd.                   |
-| size      | array  | ['100px']  | Thumbnail size.                       |
-| popSize   | array  | ['100px']  | Popup picture size.                   |
+| size      | array  | [100]      | Thumbnail size.                       |
+| popSize   | array  | [100]      | Popup picture size.                   |
 | thumbnail | string | -          | The thumbnail/popup pictures.         |
 | src       | string | -          | The popup original picutrel.          |
 

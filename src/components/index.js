@@ -41,12 +41,12 @@ export default class ReactAntImagePopView extends Component {
 
   static defaultProps = {
     placement: 'rightTop',
-    size: ['100px'],
-    popSize: ['100px']
+    size: [100],
+    popSize: [100]
   };
 
   get contentView() {
-    const { popSize } = this.props;
+    const { src, popSize } = this.props;
     return (
       <ReactFigure
         style={{
