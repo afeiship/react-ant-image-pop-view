@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import noop from '@feizheng/noop';
-import objectAssign from 'object-assign';
-import ReactFigure from '@feizheng/react-figure';
+import ReactFigure from '@jswork/react-figure';
 import { Popover } from 'antd';
 
 const CLASS_NAME = 'react-ant-image-pop-view';

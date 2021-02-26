@@ -1,56 +1,61 @@
 # react-ant-image-pop-view
 > Ant popover view image for react.
 
+[![version][version-image]][version-url]
+[![license][license-image]][license-url]
+[![size][size-image]][size-url]
+[![download][download-image]][download-url]
+
 ## installation
 ```shell
-npm install -S @feizheng/react-ant-image-pop-view
-```
-
-## update
-```shell
-npm update @feizheng/react-ant-image-pop-view
+npm install -S @jswork/react-ant-image-pop-view
 ```
 
 ## properties
-| Name      | Type   | Default    | Description                           |
-| --------- | ------ | ---------- | ------------------------------------- |
-| className | string | -          | The extended className for component. |
-| placement | string | 'rightTop' | Placement for antd.                   |
-| size      | array  | [100]      | Thumbnail size.                       |
-| popSize   | array  | [100]      | Popup picture size.                   |
-| thumbnail | string | -          | The thumbnail/popup pictures.         |
-| src       | string | -          | The popup original picutrel.          |
+| Name      | Type   | Required | Default    | Description                           |
+| --------- | ------ | -------- | ---------- | ------------------------------------- |
+| className | string | false    | -          | The extended className for component. |
+| placement | string | false    | 'rightTop' | Placement for antd.                   |
+| size      | array  | false    | [100]      | Thumbnail size.                       |
+| popSize   | array  | false    | [100]      | Popup picture size.                   |
+| thumbnail | string | false    | -          | The thumbnail/popup pictures.         |
+| src       | string | true     | -          | The popup original picutrel.          |
 
 
 ## usage
 1. import css
   ```scss
-  @import "~@feizheng/webkit-sassui-frame-wrapper/dist/index.scss";
-  @import "~@feizheng/react-figure/dist/style.scss";
-  @import "~@feizheng/react-ant-image-pop-view/dist/style.scss";
+  @import "~@jswork/react-ant-image-pop-view/dist/style.css";
+
+  // or use sass
+  @import "~@jswork/react-ant-image-pop-view/dist/style.scss";
 
   // customize your styles:
   $react-ant-image-pop-view-options: ()
   ```
 2. import js
   ```js
-  import ReactAntImagePopView from '@feizheng/react-ant-image-pop-view';
-  import ReactDOM from 'react-dom';
+  import ReactDemokit from '@jswork/react-demokit';
   import React from 'react';
+  import ReactDOM from 'react-dom';
+  import NxRandomAvatar from '@jswork/next-random-avatar';
+  import ReactAntImagePopView from '@jswork/react-ant-image-pop-view';
   import './assets/style.scss';
 
   class App extends React.Component {
-    componentDidMount() {}
     render() {
+      const img = NxRandomAvatar.lego();
       return (
-        <div className="app-container">
+        <ReactDemokit
+          className="p-3 app-container"
+          url="https://github.com/afeiship/react-ant-image-pop-view">
           <ReactAntImagePopView
-            thumbnail="https://himg.bdimg.com/sys/portrait/item/be10475f686d6c73db00.jpg"
-            src="https://himg.bdimg.com/sys/portrait/item/be10475f686d6x73db00.jpg"
-            size={['100px', '100px']}
-            popSize={[200, 200]}
+            thumbnail={img}
+            src={img}
+            size={[100, 100]}
+            popSize={[300, 300]}
           />
-        </div>
+        </ReactDemokit>
       );
     }
   }
@@ -61,3 +66,19 @@ npm update @feizheng/react-ant-image-pop-view
 
 ## documentation
 - https://afeiship.github.io/react-ant-image-pop-view/
+
+
+## license
+Code released under [the MIT license](https://github.com/afeiship/react-ant-image-pop-view/blob/master/LICENSE.txt).
+
+[version-image]: https://img.shields.io/npm/v/@jswork/react-ant-image-pop-view
+[version-url]: https://npmjs.org/package/@jswork/react-ant-image-pop-view
+
+[license-image]: https://img.shields.io/npm/l/@jswork/react-ant-image-pop-view
+[license-url]: https://github.com/afeiship/react-ant-image-pop-view/blob/master/LICENSE.txt
+
+[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/react-ant-image-pop-view
+[size-url]: https://github.com/afeiship/react-ant-image-pop-view/blob/master/dist/react-ant-image-pop-view.min.js
+
+[download-image]: https://img.shields.io/npm/dm/@jswork/react-ant-image-pop-view
+[download-url]: https://www.npmjs.com/package/@jswork/react-ant-image-pop-view

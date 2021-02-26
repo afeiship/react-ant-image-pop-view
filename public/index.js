@@ -1,20 +1,24 @@
-import ReactAntImagePopView from '../src/main';
-import ReactDOM from 'react-dom';
+import ReactDemokit from '@jswork/react-demokit';
 import React from 'react';
+import ReactDOM from 'react-dom';
+import NxRandomAvatar from '@jswork/next-random-avatar';
+import ReactAntImagePopView from '../src/main';
 import './assets/style.scss';
 
 class App extends React.Component {
-  componentDidMount() {}
   render() {
+    const img = NxRandomAvatar.lego();
     return (
-      <div className="app-container">
+      <ReactDemokit
+        className="p-3 app-container"
+        url="https://github.com/afeiship/react-ant-image-pop-view">
         <ReactAntImagePopView
-          thumbnail="https://himg.bdimg.com/sys/portrait/item/be10475f686d6c73db00.jpg"
-          src="https://himg.bdimg.com/sys/portrait/item/be10475f686d6x73db00.jpg"
-          size={['100px', '100px']}
-          popSize={[200, 200]}
+          thumbnail={img}
+          src={img}
+          size={[100, 100]}
+          popSize={[300, 300]}
         />
-      </div>
+      </ReactDemokit>
     );
   }
 }
